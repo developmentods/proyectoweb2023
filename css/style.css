@@ -1,9 +1,9 @@
-body{
-    background-color: aquamarine;
-}
-
-.parrafo{
+.parrafo {
     color: black;
     font-size: 25px;
     font-weight: bold;
+}
+
+#menu {
+    background-color: gray;
 }
