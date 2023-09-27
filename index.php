@@ -5,7 +5,7 @@
     <?php
         $probar = Connect::Conectar();
     ?>
-    <form class="row g-3">
+    <form action="Controllers/controlador.php" method="post" class="row g-3">
     <div class="col-md-6">
         <label for="inputEmail4" class="form-label">Email</label>
         <input type="email" class="form-control" id="inputEmail4">
@@ -46,6 +46,8 @@
         </div>
     </div>
     <div class="col-12">
+        <input type="hidden" name="Clase" value="EditorialModels">
+        <input type="hidden" name="Funcion" value="get_editoriales">
         <button type="submit" class="btn btn-primary">Sign in</button>
     </div>
     </form>
