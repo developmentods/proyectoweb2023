@@ -48,7 +48,9 @@
     <div class="col-12">
         <input type="hidden" name="Clase" value="EditorialModels">
         <input type="hidden" name="Funcion" value="get_editoriales">
-        <button type="submit" class="btn btn-primary">Sign in</button>
+        <input type="hidden" name="nombre" value="">
+        <input type="hidden" name="codigo" value="">
+        <button type="submit" class="btn btn-primary" name="Boton">Sign in</button>
     </div>
     </form>
     

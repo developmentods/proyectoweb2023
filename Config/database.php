@@ -2,7 +2,7 @@
     class Connect{
 
         public static function Conectar(){
-            $servidor = "127.0.0.1";
+        $servidor = "localhost";
         $db = "biblioteca";
         $user = "root";
         $pass = "admin1234";

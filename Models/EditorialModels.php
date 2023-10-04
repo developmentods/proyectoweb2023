@@ -20,8 +20,8 @@ require_once("../Config/database.php");
                 echo $e->getMessage();
                 die();
             }
-
-            require_once("../Views/AgregarEditorial.php");
+            $this->get_editoriales();
+            //require_once("../Views/AgregarEditorial.php");
         }
 
         public function get_editoriales(){
@@ -43,27 +43,33 @@ require_once("../Config/database.php");
 
         //Los siguientes metodos deben ajustarse-----
 
-        public function delete_editorial($cod){
-            $sql = "DELETE FROM editorial WHERE codigoEditorial=".$cod;
-            $res = $this->db->query($sql);
+        public function delete_editorial(){
+            $db = Connect::Conectar()->prepare("DELETE FROM editorial WHERE codigo='".$this->id."'");
+            $res = $db->execute();
             if($res){
-                return true;
+                $this->get_editoriales();
             }else{
                 return false;
             }
         }
 
         public function get_id($codigo){
-            $sql = "SELECT * FROM editorial WHERE codigoEditorial=".$codigo;
-            $res = $this->db->query($sql);
+            $db = Connect::Conectar()->prepare("SELECT * FROM editorial WHERE codigo='".$this->id."' ");
+            $res = $db->execute();
             if($row = $res->fetch_assoc()){
                 $this->editorial[] = $row;
             }
             return $this->editorial;
         }
 
-        public function actualizar($codigo, $nombre){
-            $resultado = $this->db->query("UPDATE editorial SET nombreEditorial='$nombre' where codigoEditorial='$codigo'");
+        public function actualizar(){
+            $db = Connect::Conectar()->prepare("UPDATE editorial SET nombre='".$this->editorial."' where codigo='".$this->id."' ");
+            $res = $db->execute();
+            if($res){
+                $this->get_editoriales();
+            }else{
+                return false;
+            }
         }
 
     }

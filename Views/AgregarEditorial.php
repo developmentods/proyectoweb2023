@@ -13,7 +13,7 @@
   </div>
   <input type="hidden" name="Clase" value="EditorialModels">
   <input type="hidden" name="Funcion" value="insertar">
-  <button type="submit" class="btn btn-primary">Guardar</button>
+  <button type="submit" class="btn btn-primary" name="Boton">Guardar</button>
   <button type="reset" class="btn btn-primary">Cancelar</button>
 </form>
 <?php
