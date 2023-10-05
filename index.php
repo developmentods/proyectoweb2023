@@ -53,7 +53,7 @@
         <button type="submit" class="btn btn-primary" name="Boton">Sign in</button>
     </div>
     </form>
-    
+    <a href="Models/EditorialModels.php">Ir Admin</a>
 <?php
     require_once("Views/templates/footer.php");
 ?>
