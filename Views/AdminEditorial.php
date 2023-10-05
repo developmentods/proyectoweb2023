@@ -3,7 +3,7 @@
 ?>
 <div class="table-responsive">
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#agregarEditorial">Agregar Editorial</button>
-
+    <br><br>
     <table border="1" width="80%" class="table">
         <thead>
             <tr class="table-primary">
