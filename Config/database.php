@@ -6,8 +6,9 @@
         $db = "railway";
         $user = "root";
         $pass = "piYf9Jpa2turlzlyMLcu";
+        $port = 6446;
 
-            $conexion = new PDO("mysql:host=$servidor;dbname=$db;",$user,$pass);
+            $conexion = new PDO("mysql:host=$servidor; port=6446; dbname=$db;",$user,$pass);
             
             return $conexion;
         }
